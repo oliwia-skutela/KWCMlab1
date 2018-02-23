@@ -6,8 +6,8 @@
 #define _USE_MATH_DEFINES
 #include<cmath>
 #endif
-
 #include<iostream>
+
 int main() { 
 	
 #ifdef USE_TRIGONOMETRY_DEGREE
