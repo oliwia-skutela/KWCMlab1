@@ -1,15 +1,34 @@
+
+#include<LaborkaConfig.h>
+#ifdef USE_TRIGONOMETRY_DEGREE
 #include<trygonometria.h>
+#else
+#define _USE_MATH_DEFINES
+#include<cmath>
+#endif
+
 #include<iostream>
 int main() { 
 	
+#ifdef USE_TRIGONOMETRY_DEGREE
+double resultSin=degreemath::sin_degree(45.0);
 	
-double resultSin=degreemath::sin_degree(50.0);
-	
-double resultCos=degreemath::cos_degree(50.0);
+double resultCos=degreemath::cos_degree(45.0);
 
-double resultTan=degreemath::tg_degree(50.0);
+double resultTan=degreemath::tg_degree(45.0);
 	
-double resultCtg=degreemath::ctg_degree(50.0);
+double resultCtg=degreemath::ctg_degree(45.0);
+#else
+double resultSin=sin(M_PI/4.0);
+	
+double resultCos=cos(M_PI/4.0);
+
+double resultTan=tan(M_PI/4.0);
+	
+double resultCtg=1/(tan(M_PI/4.0));
+
+#endif
+
 	
 /*...*/ //
 
